@@ -1,6 +1,14 @@
-import codecs
+import argparse
+import inspect
+import os
 import string
 from collections import Counter
+
+script_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parser = argparse.ArgumentParser()
+parser.add_argument('-i', '--txt_file', default = os.path.join(script_dir, 'PA3support/Cryptanalysis/ciphertext.txt'), help = 'Path of .txt file to analyze')
+args = parser.parse_args()
+
 
 class FrequencyAnalyzer:
     def __init__(self, file_path, encoding="utf-8"):
@@ -11,6 +19,7 @@ class FrequencyAnalyzer:
         with open(self.file_path, "r", encoding=self.encoding) as file:
             text = file.read()
 
+        print(self.file_path)
         # Convert text to lowercase
         text = text.lower()
 
@@ -25,7 +34,9 @@ class FrequencyAnalyzer:
 
         return one_grams, bi_grams, tri_grams
 
-file_path = "PA3support/Cryptanalysis/hamlet.txt"
+
+file_path = args.txt_file
+print("File to Decipher: " + file_path)
 encoding = "utf-8"  # Adjust this based on the actual encoding of the file
 analyzer = FrequencyAnalyzer(file_path, encoding)
 one_grams, bi_grams, tri_grams = analyzer.analyze()

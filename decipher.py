@@ -1,3 +1,6 @@
+import argparse
+import inspect
+import os
 import string
 
 # Define the cipher mapping
@@ -7,6 +10,12 @@ cipher_map = {
     'K': 'Q', 'V': 'R', 'R': 'S', 'J': 'T', 'U': 'U', 'D': 'V', 'Y': 'W', 'Z': 'X',
     'E': 'Y', 'O': 'Z'
 }
+
+script_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parser = argparse.ArgumentParser()
+parser.add_argument('-i', '--txt_file', default = os.path.join(script_dir, 'PA3support/Cryptanalysis/ciphertext.txt'), help = 'Path of .txt file to decipher')
+args = parser.parse_args()
+
 
 class decipher:
     def __init__(self, file_path, encoding="utf-8"):
@@ -27,7 +36,9 @@ class decipher:
                 plaintext += char
         return plaintext
 
-file_path = "PA3support/Cryptanalysis/hamlet.txt"
+
+file_path = args.txt_file
+print("File to Decipher: " + file_path)
 encoding = "utf-8"  # Adjust this based on the actual encoding of the file
 deciphered = decipher(file_path, encoding)
 # Decipher the ciphertext
@@ -38,5 +49,5 @@ decipheredText = deciphered.decipher_text()
 print("Codebook:")
 for key, value in cipher_map.items():
     print(f"{key} -> {value}")
-print("\nDeciphered Plain:")
+print("\nDeciphered Plaintext:")
 print(decipheredText)
