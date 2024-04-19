@@ -6,7 +6,7 @@ from collections import Counter
 
 script_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parser = argparse.ArgumentParser()
-parser.add_argument('-i', '--txt_file', default = os.path.join(script_dir, 'PA3support/Cryptanalysis/ciphertext.txt'), help = 'Path of .txt file to analyze')
+parser.add_argument('-i', '--txt_file', default=os.path.join(script_dir, 'ciphertext.txt'), help='Path of .txt file to analyze')
 args = parser.parse_args()
 
 
@@ -42,14 +42,14 @@ analyzer = FrequencyAnalyzer(file_path, encoding)
 one_grams, bi_grams, tri_grams = analyzer.analyze()
 
 # Print the results
-print("One-grams:")
+print("One-grams: Counts")
 for letter, count in one_grams.most_common():
-        print(f"{letter}: {count}")
+    print(f"{letter}: {count}")
 
-print("\nTop 10 Bi-grams:")
+print("\nTop 10 Bi-grams: Counts")
 for bi_gram, count in bi_grams.most_common(10):
-        print(f"{bi_gram}: {count}")
+    print(f"{bi_gram}: {count}")
 
-print("\nTop 10 Tri-grams:")
+print("\nTop 10 Tri-grams: Counts")
 for tri_gram, count in tri_grams.most_common(10):
-        print(f"{tri_gram}: {count}")
+    print(f"{tri_gram}: {count}")

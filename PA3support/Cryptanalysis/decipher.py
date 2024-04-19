@@ -13,7 +13,7 @@ cipher_map = {
 
 script_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parser = argparse.ArgumentParser()
-parser.add_argument('-i', '--txt_file', default = os.path.join(script_dir, 'PA3support/Cryptanalysis/ciphertext.txt'), help = 'Path of .txt file to decipher')
+parser.add_argument('-i', '--txt_file', default = os.path.join(script_dir, 'ciphertext.txt'), help = 'Path of .txt file to decipher')
 args = parser.parse_args()
 
 
