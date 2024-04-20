@@ -1,0 +1,222 @@
+Group16 PA3 Documentation
+1. For this project our implementation is written in pyhton. We decided to use python because we had some background
+   experience reading in files and analyzing them in python. We wrote two python scripts, frequencyAnalysis.py and
+   deciphertext.py. The frequencyAnalysis.py python script reads in the .txt file specified and counts the occurences of
+   character srings of one-grams, bi-grams, and tri-grams. These results are then printed in the console. The decipher.py
+   python script uses the cipther_map I found from the frequency analysis and used this mapping to replace each chararcter
+   with its pair in the map. I then print out the new deciphered text in the console.
+
+    ciphertext frequency analysis results:
+        File to Decipher: ciphertext.txt
+        One-grams: Counts
+        x: 161
+        t: 126
+        j: 123
+        m: 114
+        p: 107
+        c: 96
+        r: 87
+        b: 83
+        n: 68
+        v: 64
+        g: 49
+        w: 38
+        y: 30
+        a: 29
+        l: 27
+        i: 26
+        u: 25
+        h: 23
+        f: 18
+        e: 15
+        q: 12
+        d: 6
+        o: 6
+        k: 3
+        s: 1
+        z: 1
+
+        Top 10 Bi-grams: Counts
+        jp: 66
+        px: 52
+        bt: 43
+        mt: 42
+        tn: 29
+        tw: 26
+        xv: 25
+        ci: 18
+        pm: 18
+        cu: 16
+
+        Top 10 Tri-grams: Counts
+        jpx: 50
+        mtn: 26
+        btw: 23
+        hbt: 15
+        tjx: 8
+        pbr: 8
+        apm: 7
+        mlx: 6
+        xvr: 6
+        jxv: 6
+
+    hamlet frequency analysis results:
+        One-grams: Counts
+        e: 15673
+        t: 12488
+        o: 11478
+        a: 10288
+        i: 8885
+        h: 8702
+        n: 8692
+        s: 8667
+        r: 7940
+        l: 6371
+        d: 5135
+        u: 4461
+        m: 4280
+        y: 3210
+        w: 3128
+        c: 2798
+        f: 2736
+        g: 2427
+        p: 2015
+        b: 1823
+        k: 1271
+        v: 1232
+        q: 219
+        x: 174
+        z: 125
+        j: 111
+
+        Top 10 Bi-grams: Counts
+        th: 3984
+        he: 2962
+        an: 2015
+        er: 1989
+        ou: 1962
+        in: 1961
+        ha: 1871
+        nd: 1554
+        at: 1520
+        or: 1503
+
+        Top 10 Tri-grams: Counts
+        the: 1935
+        and: 1162
+        you: 856
+        hat: 697
+        ing: 679
+        her: 649
+        his: 606
+        let: 601
+        our: 523
+        thi: 502
+
+    merchantofvenice.txt frequency analysis results:
+
+        One-grams: Counts
+        e: 10786
+        t: 8056
+        o: 8046
+        a: 7338
+        i: 6388
+        n: 6146
+        s: 5972
+        h: 5766
+        r: 5406
+        l: 3930
+        d: 3405
+        u: 2934
+        m: 2561
+        y: 2451
+        w: 2177
+        c: 2078
+        f: 1980
+        g: 1588
+        b: 1541
+        p: 1256
+        v: 916
+        k: 757
+        j: 231
+        z: 116
+        x: 109
+        q: 56
+
+        Top 10 Bi-grams: Counts
+        th: 2778
+        he: 2029
+        an: 1717
+        er: 1405
+        ou: 1368
+        in: 1230
+        re: 1167
+        nd: 1110
+        or: 1109
+        ha: 1074
+
+        Top 10 Tri-grams: Counts
+        the: 1368
+        and: 753
+        you: 677
+        her: 450
+        hat: 439
+        ing: 381
+        for: 377
+        tha: 358
+        our: 322
+        his: 312
+
+    One-to-One mapping:
+    M	>>	A
+    F	>>	B
+    A	>>	C
+    N	>>	D
+    X	>>	E
+    I	>>	F
+    W	>>	G
+    P	>>	H
+    B	>>	I
+    S	>>	J
+    H	>>	K
+    G	>>	L
+    L	>>	M
+    T	>>	N
+    C	>>	O
+    Q	>>	P
+    K	>>	Q
+    V	>>	R
+    R	>>	S
+    J	>>	T
+    U	>>	U
+    D	>>	V
+    Y	>>	W
+    Z	>>	X
+    E	>>	Y
+    O	>>	Z
+
+    Deciphered Plaintext:
+    in the same hour came forth fingers of a man's hand, and wrote over against the candlestick upon the plaster of the
+    wall of the king's palace; and the king saw the part of the hand that wrote. then the king's countenance was changed,
+    and his thoughts troubled him, so that the joints of his loins were loosed, and his knees smote one against another.
+    the king cried aloud to bring in the astrologers, the chaldeans, and the soothsayers. and the king spake, and said to
+    the wise men of babylon, whosoever shall read this writing, and show me the interpretation thereof, shall be clothed
+    with scarlet, and have a chain of gold about his neck, and shall be the third ruler in the kingdom. then came in all
+    the king's wise men; but they could not read the writing, nor make known to the king the interpretation thereof. then
+    was king belshazzar greatly troubled, and his countenance was changed in him, and his lords were astonished. now the
+    queen, by reason of the words of the king and his lords, came into the banquet house; and the queen spake and said,
+    o king, live forever; let not thy thoughts trouble thee, nor let thy countenance be changed; there is a man in thy
+    kingdom, in whom is the spirit of the holy gods; and in the days of thy wisdom of the gods, was found in him; whom
+    the king nebuchadnezzar thy father, the king, i say, thy father, made master of the magicians, astrologers,
+    chaldeans, and soothsayers; forasmuch as an excellent spirit, and knowledge, and understanding, interpreting of
+    dreams, and showing of hard sentences, and dissolving of doubts, were found in the same daniel, whom the king named
+    belteshazzar; now let daniel be called, and he will show the interpretation.
+
+2. These python script are written to work with python 3.10 (what is on my VM) and no additional packages are need. Both
+   programs will take an argument with -i to specify a file path to the .txt file to use (use relative path). By default
+   it will use ciphertext.txt in the same directory as the script. Both scripts will output directly to the console.
+
+3. Once we had the counts of the most common tri-grams and from those discovering some bi-grams and finally some one-grams
+   which then allowed me to decipher some of the ciphertext.txt by hand to verify some of my early mappings made sense.
+   I definitely think python was the right choice for this beacuse of how easy it was to read in the files.
+
